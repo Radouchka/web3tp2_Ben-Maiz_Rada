@@ -1,0 +1,12 @@
+# Dossiers à ignorer
+node_modules/
+dist/
+build/
+.vscode/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Environnements
+.env
