@@ -1,0 +1,26 @@
+{
+  "name": "web3tp2_ben-maiz_rada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radouchka/web3tp2_Ben-Maiz_Rada.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Radouchka/web3tp2_Ben-Maiz_Rada/issues"
+  },
+  "homepage": "https://github.com/Radouchka/web3tp2_Ben-Maiz_Rada#readme",
+  "dependencies": {
+    "animejs": "^4.2.2",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "chart.js": "^4.5.1"
+  }
+}
