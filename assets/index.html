@@ -5,17 +5,22 @@
 <link rel="stylesheet" href="./node_modules/bootstrap-icons/...">
 <link rel="stylesheet" href="./src/css/styles.css">
 
+
 <script type="importmap">
     {
         "imports": {            
             "animejs": "./node_modules/animejs/...",
             "chart.js": "./node_modules/chart.js/...",
             "@kurkle/color": "./node_modules/@kurkle/..."
+            "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0"
         }
     }
 </script>
 <script src="./src/js/animejs.js" type="module"></script>
 <script src="./src/js/chartjs.js" type="module"></script>
+<script src="./src/js/zdog.js" type="module"></script>
+ <script src="./src/js/map.js" type="module"></script>
+
 
 <script src="./src/js/bootstrap.js" defer></script>
     <meta charset="UTF-8">
@@ -26,11 +31,13 @@
     <div class="wireframe">
   <div class="menu placeholder">MENU</div>
   <div class="character placeholder">CHARACTER</div>
-  <div class="stats placeholder">STATS</div>
+  <div class="chart-container">
+  <canvas></canvas>
+</div>
   <div class="weapon placeholder">WEAPON</div>
+  <div id="carte">CARTE</div>
   <div class="radar placeholder">RADAR</div>
   <div class="options placeholder">OPTIONS</div>
 </div>
-
 </body>
 </html>
