@@ -7,13 +7,13 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-
 <script type="importmap">
     {
         "imports": {            
             "animejs": "./node_modules/animejs/...",
             "chart.js": "./node_modules/chart.js/...",
             "@kurkle/color": "./node_modules/@kurkle/..."
+            "vfx-js": "https://esm.sh/@vfx-js/core"
         }
     }
 </script>
@@ -22,6 +22,10 @@
 <script src="./src/js/zdog.js" type="module"></script>
 <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
 <script src="./src/js/maplibre.js" type="module"></script>
+<script src="./src/js/cursor.js" type="module"></script>
+
+
+
 
 <script src="./src/js/bootstrap.js" defer></script>
     <meta charset="UTF-8">
@@ -29,11 +33,20 @@
     <title>LOADOUT</title>
 </head>
 <body>
+    <div id="visor-cursor"></div>
+
+  <script src="cursor.js"></script>
+
     <div class="wireframe">
   <div class="menu placeholder">MENU</div>
 <div id="character" class="character-grid">
-  <div class="char-left">LEFT</div>
-  <div class="char-right">RIGHT</div>
+  <div class="char-left"></div>
+  <div class="char-right">
+  <div id="vfx-container">
+  <img src="./img/Lara.png" alt="character" class="char-img" />
+</div>
+
+</div>
 </div>
   <div class="chart-container">
   <canvas></canvas>
@@ -41,7 +54,14 @@
   <div class="weapon placeholder">WEAPON</div>
   <div id="carte"></div>
   <div class="radar placeholder">RADAR</div>
-  <div class="options placeholder">OPTIONS</div>
+  <canvas class="zdog-canvas"></canvas>
 </div>
+ <script type="module">
+    import { VFX } from 'https://esm.sh/@vfx-js/core';
+    window.VFX = VFX;
+  </script>
+  <script type="module" src="./src/js/character.js"></script>
+  <script type="module" src="./src/js/vfx.js"></script>
+
 </body>
 </html>
