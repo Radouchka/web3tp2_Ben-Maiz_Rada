@@ -5,12 +5,12 @@
 :root{
       --accent:#ff2d55;
       --accent2:#00e5ff;
-      --bg:#060607;
+      --bg:#08090a;
       --panel:#0f1213cc;
       --glass: rgba(255,255,255,0.03);
     }
 
-html,body{height:100%;background:linear-gradient(180deg,#030304 0%, #08090a 60%);color:#cbd5db;}
+html,body{height:100%;background:linear-gradient(180deg,#1c271f 0%, #08090a 60%);color:#cbd5db;}
 
 .wireframe {
   display: grid;
@@ -38,7 +38,11 @@ html,body{height:100%;background:linear-gradient(180deg,#030304 0%, #08090a 60%)
 }
 #carte {
  grid-column: 3 / 4;
+  border-radius: 100%;
+  mix-blend-mode: multiply;
+  border: 9px solid rgb(0, 0, 0);
 }
+
 
 .weapon {
   grid-column: 3 / 4;

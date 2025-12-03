@@ -1,8 +1,9 @@
-import maplibregl from "https://esm.sh/maplibre-gl@5.13.0";
+import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 
-const carte = new maplibregl.Map({
+const map = new maplibregl.Map({
   container: "carte",
-  style: "https://tiles.openfreemap.org/styles/bright",
-  center: [-73.8462195, 45.6125882], // Laval
-  zoom: 9
+  style: "https://api.maptiler.com/maps/toner-v2/style.json?key=vi9DtA1TL0Ga3okiln2O",
+  center: [-73.56, 45.50], // Montreal
+  zoom: 11
 });
