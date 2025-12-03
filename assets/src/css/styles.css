@@ -27,10 +27,31 @@ html,body{height:100%;background:linear-gradient(180deg,#000000 0%, #000000 60%)
   grid-row: 1 / 3;
 }
 
-.character {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+#character {
+  grid-column: 2 / 3;     /* centre de la grille */
+  grid-row: 1 / span 2;   /* occupe 2 rangées verticales */
 }
+
+/* The CHARACTER section itself (this already sits inside your .wireframe grid) */
+.character-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;   /* 2 equal columns */
+  width: 100%;
+  height: 100%;                    /* <-- fill full CHARACTER grid area */
+  gap: 20px;                       /* keeps spacing consistent with wireframe */
+}
+
+/* Each half */
+.character-grid > div {
+  background-color: rgba(0, 50, 0, 0.8);
+  border: 2px solid black;
+  display: flex;                   /* only for centering text */
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  height: 100%;                    /* <-- forces them to stretch vertically */
+}
+
 
 .chart-container {
   grid-column: 3 / 4;
@@ -41,7 +62,7 @@ html,body{height:100%;background:linear-gradient(180deg,#000000 0%, #000000 60%)
   grid-column: 3 / 4;
   grid-row: 3 / 4; /
   height: 100%;    
-  border-radius: 10%;
+  border-radius: 70%;
   border: 9px solid rgb(11, 25, 17);
   background: #49ab28;
 }
